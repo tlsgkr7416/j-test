@@ -6,7 +6,7 @@ public class JTest {
 
         System.out.println("Ff");
         System.out.println("f");
-        System.out.println("ff");
+        System.out.println("ffFF");
         return 5;
     }
 
