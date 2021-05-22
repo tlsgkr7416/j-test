@@ -5,7 +5,7 @@ public class JTest {
     public int foo() {
 
         System.out.println("Ff");
-        System.out.println("F");
+        System.out.println("Fff");
         return 5;
     }
 
