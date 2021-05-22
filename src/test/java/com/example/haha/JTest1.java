@@ -20,6 +20,7 @@ public class JTest1 {
     public void boo() {
 
         System.out.println("a");
+        System.out.println("b");
         int a = jTest.foo();
         assertEquals(a, 5);
     }
