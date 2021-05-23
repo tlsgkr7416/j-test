@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public class HahaApplication {
 
 	public static void main(String[] args) {
-		System.out.println("ff");
+		System.out.println("fff");
 		SpringApplication.run(HahaApplication.class, args);
 	}
 
