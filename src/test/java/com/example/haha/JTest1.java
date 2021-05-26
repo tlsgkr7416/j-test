@@ -19,7 +19,7 @@ public class JTest1 {
     @DisplayName("성공")
     public void boo() {
 
-        System.out.println("adfffddddfdf");
+        System.out.println("adfffddddffdf");
         int a = jTest.foo();
         assertEquals(a, 5);
     }
