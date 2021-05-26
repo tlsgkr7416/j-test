@@ -15,7 +15,7 @@ public class HahaApplication extends SpringBootServletInitializer {
 		return builder.sources(HahaApplication.class);
 	}
 	public static void main(String[] args) {
-		System.out.println("ff");
+		System.out.println("ffdd");
 		SpringApplication.run(HahaApplication.class, args);
 	}
 
