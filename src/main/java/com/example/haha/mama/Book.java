@@ -11,7 +11,7 @@ public class Book {
 
     @GetMapping("/books")
     public String foo() {
-        return "fff";
+        return "ffff";
     }
 
     public Book(int a) {
