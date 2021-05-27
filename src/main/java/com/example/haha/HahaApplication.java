@@ -5,7 +5,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 public class HahaApplication extends SpringBootServletInitializer {
@@ -15,8 +17,13 @@ public class HahaApplication extends SpringBootServletInitializer {
 		return builder.sources(HahaApplication.class);
 	}
 	public static void main(String[] args) {
+
 		System.out.println("ffddd");
 		SpringApplication.run(HahaApplication.class, args);
+
+		List<Integer> az = new ArrayList<>();
+		az.add(5);
+
 	}
 
 }
