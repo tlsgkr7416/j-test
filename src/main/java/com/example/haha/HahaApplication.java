@@ -24,6 +24,8 @@ public class HahaApplication extends SpringBootServletInitializer {
 		List<Integer> az = new ArrayList<>();
 		az.add(5);
 
+
+
 	}
 
 }

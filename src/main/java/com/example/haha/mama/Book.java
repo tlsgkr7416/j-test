@@ -5,17 +5,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class Book {
-
-    private final int a;
+public class Book extends Shop{
 
     @GetMapping("/books")
     public String foo() {
         return "ffffF";
-    }
-
-    public Book(int a) {
-        this.a = a;
     }
 
 }
