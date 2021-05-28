@@ -21,6 +21,6 @@ public class JTest1 {
 
         System.out.println("adfffddddffdf");
         int a = jTest.foo();
-        assertEquals(a, 5);
+        assertEquals(a, 4);
     }
 }
