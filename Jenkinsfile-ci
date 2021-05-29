@@ -1,0 +1,38 @@
+pipeline {
+   agent any
+
+   tools {
+        maven 'maven'
+   }
+
+   stages {
+        stage('checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                script {
+                    sh 'mvn clean package -DskipTests=true';
+                }
+            }
+        }
+        
+        stage('Unit Test') {
+            steps {
+                script {
+                    sh 'mvn surefile:test'
+                    junit '**/target/surfire-reports/TEST-*.xml'
+                }
+            }
+        }
+   }
+
+    post {
+      success {
+           echo 'Build Success'
+      }
+    }
+}
