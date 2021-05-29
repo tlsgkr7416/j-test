@@ -2,13 +2,14 @@ pipeline {
    agent any
 
    tools {
-        maven 'maven'
+        maven 'MAVEN_HOME'
    }
 
    stages {
         stage('checkout') {
             steps {
                 checkout scm
+                echo 'git checkout success'
             }
         }
 
@@ -19,7 +20,7 @@ pipeline {
                 }
             }
         }
-        
+
         stage('Unit Test') {
             steps {
                 script {
