@@ -2,7 +2,7 @@ pipeline {
    agent any
 
    tools {
-        maven 'MAVEN_HOME'
+        maven 'maven'
    }
 
    stages {
@@ -16,7 +16,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean package -DskipTests=true';
+                    sh 'mvn clean package -DskipTests=true'
+                    echo 'build success'
                 }
             }
         }
@@ -26,14 +27,10 @@ pipeline {
                 script {
                     sh 'mvn surefire:test'
                     junit '**/target/surefire-reports/TEST-*.xml'
+                    echo 'test success'
                 }
             }
         }
    }
 
-    post {
-      success {
-           echo 'Build Success'
-      }
-    }
 }
