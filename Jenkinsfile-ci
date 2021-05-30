@@ -28,6 +28,7 @@ pipeline {
                 script {
                     sh 'mvn surefire:test'
                     junit '**/target/surefire-reports/TEST-*.xml'
+                    archiveArtifacts '**/target/*.war'
                     echo 'test success'
                 }
             }
