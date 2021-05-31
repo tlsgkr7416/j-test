@@ -17,8 +17,17 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'mvn clean package'
+                    sh 'mvn clean package -DskipTests=true'
                     echo 'build success'
+                }
+            }
+        }
+
+        stage('Unit Test') {
+            steps {
+                script {
+                    sh 'mvn surefire:test'
+                    junit '**/target/surefire-reports/TEST-*.xml'
                 }
             }
         }

@@ -8,6 +8,7 @@ class HahaApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println("ttttttttttttttttttttttttttttttt");
 	}
 
 }
